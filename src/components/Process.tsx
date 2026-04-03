@@ -137,13 +137,20 @@ const Process = () => {
                     transitionDelay: linesActive ? `${180 + index * STEP_STAGGER_MS}ms` : '0ms',
                   }}
                 >
-                  {/* Außenringe im Home-Stil (schwarz / Anthrazit wie Hero), Innenkreis bleibt weiß */}
-                  <div className="pointer-events-none absolute -inset-[2px] rounded-full bg-gradient-to-br from-black via-neutral-950 to-zinc-900 opacity-[0.97] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12)]" />
-                  <div className="pointer-events-none absolute -inset-[5px] rounded-full bg-gradient-to-br from-white/[0.08] via-transparent to-black/40 blur-md opacity-90" />
+                  {/* Nur Kreis + Ringe — ohne Verbindungslinie, sonst werden die Ringe zur hohen Ellipse (nur Schritt 4 wirkte „flach“). */}
+                  <div className="relative mx-auto mb-1 w-full max-w-[min(100%,288px)]">
+                    {/* Schwarze Tiefen-Fläche unter dem Kreis — für alle vier Schritte identisch */}
+                    <div
+                      className="pointer-events-none absolute left-1/2 top-[78%] z-0 h-[34%] w-[92%] -translate-x-1/2 rounded-full bg-gradient-to-b from-neutral-950 via-black to-zinc-950 opacity-[0.98] shadow-[0_20px_40px_-14px_rgba(0,0,0,0.55)]"
+                      aria-hidden
+                    />
+                    {/* Außenringe im Home-Stil (schwarz / Anthrazit wie Hero), Innenkreis bleibt weiß */}
+                    <div className="pointer-events-none absolute -inset-[2px] z-[1] rounded-full bg-gradient-to-br from-black via-neutral-950 to-zinc-900 opacity-[0.97] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12)]" />
+                    <div className="pointer-events-none absolute -inset-[5px] z-[1] rounded-full bg-gradient-to-br from-white/[0.08] via-transparent to-black/40 blur-md opacity-90" />
 
-                  <div
-                    className="relative mx-auto flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white bg-gradient-to-b from-white via-neutral-50/95 to-neutral-100/85 px-5 py-6 text-center shadow-[0_4px_6px_-1px_rgba(15,23,42,0.06),0_24px_48px_-12px_rgba(15,23,42,0.1),inset_0_1px_0_0_rgba(255,255,255,0.98)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:border-white group-hover:shadow-[0_8px_30px_-8px_rgba(15,23,42,0.14),0_32px_64px_-20px_rgba(15,23,42,0.16)] md:px-6"
-                  >
+                    <div
+                      className="relative z-10 mx-auto flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white bg-gradient-to-b from-white via-neutral-50/95 to-neutral-100/85 px-5 py-6 text-center shadow-[0_4px_6px_-1px_rgba(15,23,42,0.06),0_24px_48px_-12px_rgba(15,23,42,0.1),inset_0_1px_0_0_rgba(255,255,255,0.98)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:border-white group-hover:shadow-[0_8px_30px_-8px_rgba(15,23,42,0.14),0_32px_64px_-20px_rgba(15,23,42,0.16)] md:px-6"
+                    >
                     <div
                       className="pointer-events-none absolute inset-0 rounded-full opacity-[0.65]"
                       style={{
@@ -173,6 +180,7 @@ const Process = () => {
                     </p>
 
                     <div className="pointer-events-none absolute inset-x-12 bottom-5 h-px bg-gradient-to-r from-transparent via-neutral-300/70 to-transparent opacity-70" />
+                    </div>
                   </div>
 
                   {/* Vertikale Verbindung — mobil / tablet */}
