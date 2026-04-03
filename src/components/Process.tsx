@@ -64,22 +64,16 @@ const Process = () => {
     <section
       ref={sectionRef}
       id="process"
-      className="relative overflow-visible bg-gradient-to-b from-neutral-50/80 via-white to-neutral-50/40 py-28 md:py-36"
+      className="relative overflow-visible bg-white py-28 md:py-36"
     >
-      {/* Kein Raster — nur weiche Verläufe (Raster wirkte wie helles Viereck-Muster) */}
+      {/* Dezente Kanten — ohne grauen Flächen-Verlauf (Hintergrund bleibt weiß) */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_70%_at_50%_-20%,rgba(15,23,42,0.045),transparent_58%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_100%,rgba(241,245,249,0.9),transparent_62%)]" />
         <div
-          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-300/70 to-transparent"
+          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200/80 to-transparent"
           aria-hidden
         />
         <div
-          className="absolute -top-28 left-1/2 h-[20rem] w-[min(100%,44rem)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(15,23,42,0.045),transparent)] blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200/90 to-transparent"
+          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200/80 to-transparent"
           aria-hidden
         />
       </div>
