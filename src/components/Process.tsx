@@ -64,25 +64,28 @@ const Process = () => {
     <section
       ref={sectionRef}
       id="process"
-      className="relative overflow-hidden bg-white py-28 md:py-36"
+      className="relative overflow-visible bg-white py-28 md:py-36"
     >
-      {/* Subtile Tiefe: Raster + Spotlight — hell, editorial */}
-      <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_0%,#000_50%,transparent_100%)]"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-300/80 to-transparent"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -top-32 left-1/2 h-[22rem] w-[min(100%,48rem)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(15,23,42,0.06),transparent)] blur-3xl"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent"
-        aria-hidden
-      />
+      {/* Nur Dekor clippen — Kreis-Schatten (v. a. rechts bei Schritt 4) nicht abschneiden */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        {/* Subtile Tiefe: Raster + Spotlight — hell, editorial */}
+        <div
+          className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_0%,#000_50%,transparent_100%)]"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-300/80 to-transparent"
+          aria-hidden
+        />
+        <div
+          className="absolute -top-32 left-1/2 h-[22rem] w-[min(100%,48rem)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(15,23,42,0.06),transparent)] blur-3xl"
+          aria-hidden
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent"
+          aria-hidden
+        />
+      </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center md:mb-24">
