@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Mail, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import ContactMap from './ContactMap';
+import { GOOGLE_MAPS_OPEN_URL, SITE_ADDRESS } from '../config/site';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-light text-lg mb-1">Email</h3>
-                  <p className="text-white/50 text-sm font-light">kontakt@elite-agency.de</p>
+                  <p className="text-white/50 text-sm font-light">kontakt@shigowerbung.de</p>
                 </div>
               </div>
             </div>
@@ -84,6 +85,25 @@ const Contact = () => {
                 <div>
                   <h3 className="text-white font-light text-lg mb-1">Telefon</h3>
                   <p className="text-white/50 text-sm font-light">+49 123 456 7890</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-white/5 rounded-lg border border-white/10 group-hover:bg-white/10 transition-all">
+                  <MapPin className="w-5 h-5 text-white/80" />
+                </div>
+                <div>
+                  <h3 className="text-white font-light text-lg mb-1">Adresse</h3>
+                  <a
+                    href={GOOGLE_MAPS_OPEN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/50 text-sm font-light leading-relaxed transition-colors hover:text-white/80"
+                  >
+                    {SITE_ADDRESS}
+                  </a>
                 </div>
               </div>
             </div>

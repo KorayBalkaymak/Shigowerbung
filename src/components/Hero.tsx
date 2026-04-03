@@ -20,15 +20,15 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-6xl md:text-8xl font-thin text-white mb-6 tracking-tight animate-fadeInUp">
-          Digitale
-          <span className="block mt-2 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
-            Exzellenz
+        <h1 className="mb-6 max-w-4xl mx-auto text-4xl font-thin tracking-tight text-white animate-fadeInUp sm:text-5xl md:text-6xl md:leading-[1.12] lg:text-7xl">
+          <span className="block bg-gradient-to-r from-white via-white to-gray-400 bg-clip-text text-transparent">
+            Werbung für Läden &amp; Unternehmen
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-white/60 font-light mb-12 max-w-3xl mx-auto leading-relaxed animate-fadeInUp-delayed">
-          Wir schaffen außergewöhnliche digitale Erlebnisse für zukunftsorientierte Unternehmen
+        <p className="mb-12 max-w-3xl mx-auto text-lg font-light leading-relaxed text-white/65 animate-fadeInUp-delayed md:text-xl md:leading-relaxed">
+          Hochwertige 3D-Reklame, Werbeprospekte und Visitenkarten – von Braunschweig aus für Marken, die im Kopf
+          bleiben.
         </p>
 
         <button

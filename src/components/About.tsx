@@ -10,17 +10,30 @@ const About = () => {
               <div className="text-sm font-light text-neutral-500 tracking-widest mb-4">
                 ÜBER UNS
               </div>
-              <h2 className="text-5xl md:text-6xl font-thin text-neutral-900 leading-tight">
-                Perfektion
-                <span className="block mt-2 text-neutral-600">trifft Innovation</span>
+              <h2 className="text-4xl font-thin leading-tight text-neutral-900 sm:text-5xl md:text-6xl">
+                <span className="block sm:inline">Werbung, die bleibt</span>
+                <span className="hidden px-1 font-light text-neutral-400 sm:inline">·</span>
+                <span className="mt-1 block text-neutral-600 sm:mt-0 sm:inline">
+                  Qualität, die zählt
+                </span>
               </h2>
             </div>
 
-            <p className="text-lg text-neutral-600 font-light leading-relaxed">
-              Wir sind mehr als eine Agentur. Wir sind Partner für Unternehmen, die nach
-              außergewöhnlichen digitalen Lösungen streben. Mit präziser Ausführung und
-              kompromissloser Qualität verwandeln wir Visionen in Realität.
-            </p>
+            <div className="space-y-5 text-lg text-neutral-600 font-light leading-relaxed">
+              <p>
+                Wir sind spezialisiert auf hochwertige Werbelösungen für Unternehmen, die
+                sichtbar herausstechen wollen.
+              </p>
+              <p>
+                Von auffälliger 3D-Reklame für Schaufenster und Fassaden über individuell
+                gestaltete Werbeprospekte bis hin zu professionellen Visitenkarten – wir
+                verbinden kreatives Design mit präziser Umsetzung.
+              </p>
+              <p>
+                Unser Anspruch ist es, Marken visuell zu stärken, Aufmerksamkeit zu erzeugen
+                und einen bleibenden Eindruck bei Ihren Kunden zu hinterlassen.
+              </p>
+            </div>
 
             <div className="space-y-6 pt-8">
               <div className="flex items-start gap-4 group">

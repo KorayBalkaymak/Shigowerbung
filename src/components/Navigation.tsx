@@ -28,7 +28,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('home')}
             className="text-2xl font-thin tracking-wider text-neutral-900 hover:text-neutral-600 transition-colors"
           >
-            ELITE
+            shigowerbung
           </button>
 
           <div className="hidden md:flex items-center gap-8">

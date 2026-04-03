@@ -1,8 +1,5 @@
 import { MapPin } from 'lucide-react';
-
-/** Google Maps: Teilen → Karte einbetten → URL aus src="…" als VITE_GOOGLE_MAPS_EMBED_URL in .env */
-const DEFAULT_EMBED =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9782808268586!2d13.377704315809742!3d52.516288279813844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c655f20989%3A0x26bbfb4e84674c63!2sBrandenburger%20Tor!5e0!3m2!1sde!2sde!4v1709120400000!5m2!1sde!2sde';
+import { DEFAULT_GOOGLE_MAPS_EMBED_URL, SITE_ADDRESS } from '../config/site';
 
 type ContactMapProps = {
   /** Direkt unter dem Kontakt-Einleitungstext: nur Karte, ohne zweite große Überschrift */
@@ -10,7 +7,7 @@ type ContactMapProps = {
 };
 
 const ContactMap = ({ variant = 'default' }: ContactMapProps) => {
-  const src = import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL || DEFAULT_EMBED;
+  const src = import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL || DEFAULT_GOOGLE_MAPS_EMBED_URL;
   const underIntro = variant === 'under-intro';
 
   return (
@@ -22,7 +19,7 @@ const ContactMap = ({ variant = 'default' }: ContactMapProps) => {
       }
     >
       {underIntro ? (
-        <h3 className="sr-only">Standort auf Google Maps</h3>
+        <h3 className="sr-only">Standort {SITE_ADDRESS} auf Google Maps</h3>
       ) : (
         <div className="text-center mb-6 md:mb-10">
           <div className="inline-flex items-center justify-center gap-2 text-sm font-light text-white/40 tracking-widest mb-3">
@@ -33,7 +30,7 @@ const ContactMap = ({ variant = 'default' }: ContactMapProps) => {
             So finden Sie uns
           </h3>
           <p className="mt-3 text-sm text-white/45 font-light max-w-lg mx-auto px-2">
-            Interaktive Wegbeschreibung — eigene Adresse über Google Maps einbetten und in den Projekteinstellungen hinterlegen.
+            {SITE_ADDRESS}
           </p>
         </div>
       )}
