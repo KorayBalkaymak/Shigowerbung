@@ -64,19 +64,18 @@ const Process = () => {
     <section
       ref={sectionRef}
       id="process"
-      className="relative overflow-visible bg-white py-28 md:py-36"
+      className="relative z-10 w-full overflow-visible py-28 md:py-36"
+      style={{
+        backgroundColor: '#ffffff',
+        backgroundImage:
+          'linear-gradient(180deg, #ffffff 0%, rgb(252, 254, 255) 44%, #ffffff 100%)',
+      }}
     >
-      {/* Dezente Kanten — ohne grauen Flächen-Verlauf (Hintergrund bleibt weiß) */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        <div
-          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-200/80 to-transparent"
-          aria-hidden
-        />
-        <div
-          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200/80 to-transparent"
-          aria-hidden
-        />
-      </div>
+      {/* Hochglanz-Reflex (nur kühles Weiß, kein Grau) */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_115%_65%_at_50%_-12%,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_58%)]"
+        aria-hidden
+      />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center md:mb-24">
