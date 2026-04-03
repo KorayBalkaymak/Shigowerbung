@@ -26,6 +26,26 @@
   .animate-pulse-slow-delayed {
     animation: pulse-slow 4s ease-in-out infinite 2s;
   }
+
+  .animate-hologram-pulse {
+    animation: hologram-pulse 3.2s ease-in-out infinite;
+  }
+
+  .animate-hologram-sweep {
+    animation: hologram-sweep 2.8s linear infinite;
+  }
+
+  .animate-hologram-shimmer {
+    animation: hologram-shimmer 5s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-hologram-pulse,
+    .animate-hologram-sweep,
+    .animate-hologram-shimmer {
+      animation: none;
+    }
+  }
 }
 
 @keyframes fadeIn {
@@ -56,6 +76,37 @@
   50% {
     opacity: 0.6;
     transform: scale(1.05);
+  }
+}
+
+/* Hologram-Boden unter Prozess-Kreisen */
+@keyframes hologram-pulse {
+  0%,
+  100% {
+    opacity: 0.42;
+    filter: brightness(0.92) saturate(1.1);
+  }
+  50% {
+    opacity: 0.88;
+    filter: brightness(1.12) saturate(1.25);
+  }
+}
+
+@keyframes hologram-sweep {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes hologram-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
   }
 }
 
