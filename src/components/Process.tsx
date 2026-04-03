@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Search, Lightbulb, Hammer, CheckCircle2 } from 'lucide-react';
+import { Search, Lightbulb, Hammer, Trophy } from 'lucide-react';
 
 const TRUNK_MS = 1200;
 const BRANCH_BASE_MS = 480;
@@ -53,7 +53,7 @@ const Process = () => {
       description: 'Präzise Implementierung mit höchster Qualität und Liebe zum Detail',
     },
     {
-      icon: CheckCircle2,
+      icon: Trophy,
       number: '04',
       title: 'Ergebnis',
       description: 'Lieferung eines außergewöhnlichen Produkts, das Ihre Erwartungen übertrifft',
@@ -116,14 +116,14 @@ const Process = () => {
             />
           </div>
 
-          <div className="grid max-md:gap-0 md:grid-cols-2 md:gap-x-6 md:gap-y-16 lg:grid-cols-4 lg:gap-10">
+          <div className="grid max-md:gap-0 md:grid-cols-2 md:gap-x-6 md:gap-y-16 lg:grid-cols-4 lg:gap-10 lg:items-start">
             {steps.map((step, index) => (
               <div
                 key={step.title}
-                className="group relative max-md:[&:not(:last-child)]:mb-6 max-md:[&:not(:last-child)]:pb-6"
+                className="group relative min-w-0 max-md:[&:not(:last-child)]:mb-6 max-md:[&:not(:last-child)]:pb-6"
               >
                 <div
-                  className="relative mx-auto w-full max-w-[min(100%,288px)] will-change-transform"
+                  className="relative z-10 mx-auto w-full max-w-[min(100%,288px)] will-change-transform"
                   style={{
                     opacity: linesActive ? 1 : 0,
                     transform: linesActive
