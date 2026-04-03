@@ -19,6 +19,10 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
+      if (!supabase) {
+        throw new Error('Kontaktformular: Supabase ist nicht konfiguriert (VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY in Vercel).');
+      }
+
       const { error } = await supabase
         .from('contact_submissions')
         .insert([formData]);
