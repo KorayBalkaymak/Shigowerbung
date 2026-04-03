@@ -64,25 +64,22 @@ const Process = () => {
     <section
       ref={sectionRef}
       id="process"
-      className="relative overflow-visible bg-white py-28 md:py-36"
+      className="relative overflow-visible bg-gradient-to-b from-neutral-50/80 via-white to-neutral-50/40 py-28 md:py-36"
     >
-      {/* Nur Dekor clippen — Kreis-Schatten (v. a. rechts bei Schritt 4) nicht abschneiden */}
+      {/* Kein Raster — nur weiche Verläufe (Raster wirkte wie helles Viereck-Muster) */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        {/* Subtile Tiefe: Raster + Spotlight — hell, editorial */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_70%_at_50%_-20%,rgba(15,23,42,0.045),transparent_58%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_100%,rgba(241,245,249,0.9),transparent_62%)]" />
         <div
-          className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_0%,#000_50%,transparent_100%)]"
+          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-300/70 to-transparent"
           aria-hidden
         />
         <div
-          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-neutral-300/80 to-transparent"
+          className="absolute -top-28 left-1/2 h-[20rem] w-[min(100%,44rem)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(15,23,42,0.045),transparent)] blur-3xl"
           aria-hidden
         />
         <div
-          className="absolute -top-32 left-1/2 h-[22rem] w-[min(100%,48rem)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(15,23,42,0.06),transparent)] blur-3xl"
-          aria-hidden
-        />
-        <div
-          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent"
+          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-200/90 to-transparent"
           aria-hidden
         />
       </div>
@@ -139,75 +136,78 @@ const Process = () => {
                 >
                   {/* Nur Kreis + Ringe — ohne Verbindungslinie, sonst werden die Ringe zur hohen Ellipse (nur Schritt 4 wirkte „flach“). */}
                   <div className="relative mx-auto mb-1 w-full max-w-[min(100%,288px)]">
-                    {/* Hologram-Boden (dunkelblau) — unter dem Kreis, alle Schritte gleich */}
+                    {/* Hologram-Boden — weich maskiert, ohne kastige Raster-Linien */}
                     <div
-                      className="pointer-events-none absolute left-1/2 top-[76%] z-0 h-[38%] w-[93%] -translate-x-1/2 overflow-hidden rounded-full shadow-[0_24px_52px_-14px_rgba(30,58,138,0.55),0_0_52px_-4px_rgba(59,130,246,0.42)]"
+                      className="pointer-events-none absolute left-1/2 top-[76%] z-0 h-[38%] w-[93%] -translate-x-1/2 overflow-hidden rounded-[100%] shadow-[0_28px_56px_-16px_rgba(23,37,84,0.45),0_0_60px_-8px_rgba(59,130,246,0.32)] [mask-image:radial-gradient(ellipse_95%_100%_at_50%_18%,#000_52%,transparent_78%)]"
                       aria-hidden
                     >
-                      <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#030712] to-[#020617]" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#071018] via-[#020617] to-[#010409]" />
+                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_85%_at_50%_0%,rgba(37,99,235,0.35),transparent_68%)] opacity-90" />
                       <div
-                        className="absolute -inset-[25%] animate-hologram-sweep opacity-[0.45]"
+                        className="absolute -inset-[30%] animate-hologram-sweep opacity-[0.28] blur-[0.35px]"
                         style={{
                           backgroundImage:
-                            'repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(59,130,246,0.28) 3px, rgba(59,130,246,0.28) 4px)',
+                            'repeating-linear-gradient(0deg, transparent, transparent 6px, rgba(96,165,250,0.14) 6px, rgba(96,165,250,0.14) 7px)',
                         }}
                       />
+                      <div className="absolute inset-0 animate-hologram-pulse bg-[radial-gradient(ellipse_95%_75%_at_50%_5%,rgba(59,130,246,0.42),transparent_66%)]" />
                       <div
-                        className="absolute inset-0 opacity-40 mix-blend-screen"
+                        className="absolute inset-0 animate-hologram-shimmer opacity-[0.42] mix-blend-screen"
                         style={{
                           backgroundImage:
-                            'repeating-linear-gradient(90deg, transparent 0px, transparent 9px, rgba(37,99,235,0.14) 9px, rgba(37,99,235,0.14) 10px)',
+                            'linear-gradient(118deg, transparent 0%, rgba(56,189,248,0.12) 32%, transparent 54%, rgba(129,140,248,0.1) 76%, transparent 100%)',
+                          backgroundSize: '220% 220%',
                         }}
                       />
-                      <div className="absolute inset-0 animate-hologram-pulse bg-[radial-gradient(ellipse_92%_72%_at_50%_0%,rgba(59,130,246,0.5),transparent_64%)]" />
-                      <div
-                        className="absolute inset-0 animate-hologram-shimmer opacity-[0.55] mix-blend-screen"
-                        style={{
-                          backgroundImage:
-                            'linear-gradient(105deg, transparent 0%, rgba(56,189,248,0.2) 28%, transparent 52%, rgba(99,102,241,0.15) 78%, transparent 100%)',
-                          backgroundSize: '200% 200%',
-                        }}
-                      />
-                      <div className="absolute inset-x-0 bottom-0 top-[52%] bg-gradient-to-t from-blue-500/35 via-blue-600/12 to-transparent" />
-                      <div className="absolute bottom-1 left-1/2 h-[50%] w-px max-w-full -translate-x-1/2 bg-gradient-to-t from-cyan-300/70 via-blue-400/45 to-transparent blur-[0.5px]" />
-                      <div className="absolute bottom-2 left-1/2 h-2.5 w-[4.5rem] max-w-[72%] -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-sky-400/45 to-transparent blur-md" />
+                      <div className="absolute inset-0 bg-[conic-gradient(from_200deg_at_50%_120%,transparent_0deg,rgba(56,189,248,0.08)_38deg,transparent_78deg)] opacity-70" />
+                      <div className="absolute inset-x-0 bottom-0 top-[58%] bg-gradient-to-t from-blue-600/28 via-blue-900/5 to-transparent" />
+                      <div className="absolute bottom-0.5 left-1/2 h-[46%] w-[1.5px] max-w-full -translate-x-1/2 bg-gradient-to-t from-sky-300/55 via-blue-500/35 to-transparent blur-[1px]" />
+                      <div className="absolute bottom-1.5 left-1/2 h-3 w-[5rem] max-w-[78%] -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-sky-400/35 to-transparent blur-lg" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/[0.03]" />
                     </div>
                     {/* Außenringe — leicht ins Blau gezogen, zum Hologram-Boden */}
                     <div className="pointer-events-none absolute -inset-[2px] z-[1] rounded-full bg-gradient-to-br from-slate-950 via-[#0c1826] to-blue-950 opacity-[0.97] shadow-[inset_0_1px_0_0_rgba(147,197,253,0.16)]" />
                     <div className="pointer-events-none absolute -inset-[5px] z-[1] rounded-full bg-gradient-to-br from-blue-400/[0.09] via-transparent to-slate-950/55 blur-md opacity-90" />
 
                     <div
-                      className="relative z-10 mx-auto flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white bg-gradient-to-b from-white via-neutral-50/95 to-neutral-100/85 px-5 py-6 text-center shadow-[0_4px_6px_-1px_rgba(15,23,42,0.06),0_24px_48px_-12px_rgba(15,23,42,0.1),inset_0_1px_0_0_rgba(255,255,255,0.98)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:border-white group-hover:shadow-[0_8px_30px_-8px_rgba(15,23,42,0.14),0_32px_64px_-20px_rgba(15,23,42,0.16)] md:px-6"
+                      className="relative z-10 mx-auto flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white/95 bg-gradient-to-b from-white via-neutral-50/98 to-[#f4f7fb] px-5 py-6 text-center shadow-[0_4px_6px_-1px_rgba(15,23,42,0.06),0_24px_48px_-12px_rgba(15,23,42,0.1),0_0_0_1px_rgba(255,255,255,0.85),inset_0_1px_0_0_rgba(255,255,255,0.98)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:border-white group-hover:shadow-[0_8px_30px_-8px_rgba(30,58,138,0.12),0_32px_64px_-20px_rgba(15,23,42,0.14)] md:px-6"
                     >
-                    <div
-                      className="pointer-events-none absolute inset-0 rounded-full opacity-[0.65]"
-                      style={{
-                        background:
-                          'radial-gradient(circle at 35% 15%, rgba(255,255,255,0.95), transparent 45%)',
-                      }}
-                    />
-                    <div
-                      className="pointer-events-none absolute inset-[1px] rounded-full border border-white/80"
-                      aria-hidden
-                    />
+                      <div
+                        className="pointer-events-none absolute inset-0 rounded-full opacity-[0.65]"
+                        style={{
+                          background:
+                            'radial-gradient(circle at 35% 12%, rgba(255,255,255,0.98), transparent 46%)',
+                        }}
+                      />
+                      <div
+                        className="pointer-events-none absolute inset-0 rounded-full opacity-[0.35]"
+                        style={{
+                          background:
+                            'radial-gradient(ellipse 85% 55% at 50% 100%, rgba(219,234,254,0.35), transparent 52%)',
+                        }}
+                      />
+                      <div
+                        className="pointer-events-none absolute inset-[1px] rounded-full border border-white/85"
+                        aria-hidden
+                      />
 
-                    <span className="absolute right-4 top-4 font-mono text-[10px] font-semibold tabular-nums tracking-[0.3em] text-neutral-300 transition-colors group-hover:text-neutral-400">
-                      {step.number}
-                    </span>
+                      <span className="absolute right-4 top-4 font-mono text-[10px] font-semibold tabular-nums tracking-[0.3em] text-neutral-300 transition-colors group-hover:text-neutral-400">
+                        {step.number}
+                      </span>
 
-                    <div className="relative z-10 mb-3.5 flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200/80 bg-white shadow-[0_8px_24px_-6px_rgba(15,23,42,0.08)] transition-all duration-500 group-hover:border-neutral-300 group-hover:shadow-[0_12px_32px_-8px_rgba(15,23,42,0.15)]">
-                      <step.icon className="h-7 w-7 text-neutral-800" strokeWidth={1.15} />
-                    </div>
+                      <div className="relative z-10 mb-3.5 flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200/75 bg-white/95 shadow-[0_8px_24px_-6px_rgba(30,58,138,0.1)] transition-all duration-500 group-hover:border-blue-200/60 group-hover:shadow-[0_12px_32px_-8px_rgba(37,99,235,0.15)]">
+                        <step.icon className="h-7 w-7 text-neutral-800" strokeWidth={1.15} />
+                      </div>
 
-                    <h3 className="relative z-10 mb-2 text-lg font-light tracking-tight text-neutral-900 md:text-xl">
-                      {step.title}
-                    </h3>
+                      <h3 className="relative z-10 mb-2 text-lg font-light tracking-tight text-neutral-900 md:text-xl">
+                        {step.title}
+                      </h3>
 
-                    <p className="relative z-10 max-w-[13.5rem] text-[0.8125rem] font-light leading-relaxed text-neutral-500 md:text-sm">
-                      {step.description}
-                    </p>
+                      <p className="relative z-10 max-w-[13.5rem] text-[0.8125rem] font-light leading-relaxed text-neutral-500 md:text-sm">
+                        {step.description}
+                      </p>
 
-                    <div className="pointer-events-none absolute inset-x-12 bottom-5 h-px bg-gradient-to-r from-transparent via-neutral-300/70 to-transparent opacity-70" />
+                      <div className="pointer-events-none absolute inset-x-12 bottom-5 h-px bg-gradient-to-r from-transparent via-neutral-300/60 to-transparent opacity-60" />
                     </div>
                   </div>
 

@@ -83,12 +83,12 @@
 @keyframes hologram-pulse {
   0%,
   100% {
-    opacity: 0.42;
-    filter: brightness(0.92) saturate(1.1);
+    opacity: 0.48;
+    filter: brightness(0.94) saturate(1.08);
   }
   50% {
-    opacity: 0.88;
-    filter: brightness(1.12) saturate(1.25);
+    opacity: 0.82;
+    filter: brightness(1.08) saturate(1.18);
   }
 }
 
@@ -97,16 +97,16 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-14px);
+    transform: translateY(-10px);
   }
 }
 
 @keyframes hologram-shimmer {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 40%;
   }
   100% {
-    background-position: 200% 50%;
+    background-position: 180% 60%;
   }
 }
 

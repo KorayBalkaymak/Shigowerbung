@@ -25,7 +25,7 @@ const Services = () => {
   return (
     <section id="services" className="relative overflow-hidden py-32 bg-[#07080c]">
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_45%,transparent_100%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_50%_-10%,rgba(255,255,255,0.04),transparent_55%),radial-gradient(ellipse_70%_50%_at_80%_60%,rgba(59,130,246,0.06),transparent_50%)]"
         aria-hidden
       />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" aria-hidden />
