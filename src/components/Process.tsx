@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Search, Lightbulb, Hammer, CheckCircle } from 'lucide-react';
+import { Search, Lightbulb, Hammer, CheckCircle2 } from 'lucide-react';
 
 const TRUNK_MS = 1200;
 const BRANCH_BASE_MS = 480;
@@ -53,7 +53,7 @@ const Process = () => {
       description: 'Präzise Implementierung mit höchster Qualität und Liebe zum Detail',
     },
     {
-      icon: CheckCircle,
+      icon: CheckCircle2,
       number: '04',
       title: 'Ergebnis',
       description: 'Lieferung eines außergewöhnlichen Produkts, das Ihre Erwartungen übertrifft',
