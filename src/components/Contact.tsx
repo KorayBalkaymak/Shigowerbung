@@ -111,12 +111,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <div className="pt-8">
-              <p className="text-white/40 font-light text-sm leading-relaxed">
-                Schreiben Sie uns eine Nachricht und wir melden uns innerhalb von 24 Stunden bei Ihnen zurück.
-              </p>
-            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
