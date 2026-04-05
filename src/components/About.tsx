@@ -1,4 +1,4 @@
-import { Shield, Award, Sparkles } from 'lucide-react';
+import { Shield, Award, Rocket } from 'lucide-react';
 
 const About = () => {
   return (
@@ -62,7 +62,7 @@ const About = () => {
 
               <div className="flex items-start gap-4 group">
                 <div className="p-3 bg-neutral-100 rounded-lg border border-neutral-200 group-hover:bg-neutral-200/80 group-hover:border-neutral-300 transition-all">
-                  <Sparkles className="w-5 h-5 text-neutral-700" />
+                  <Rocket className="w-5 h-5 text-neutral-700" strokeWidth={1.5} />
                 </div>
                 <div>
                   <h3 className="text-neutral-900 font-light text-lg mb-1">Zukunftsorientiert</h3>
