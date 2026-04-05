@@ -39,25 +39,10 @@
     animation: hologram-shimmer 5s linear infinite;
   }
 
-  .animate-elite-glow-ring {
-    animation: elite-glow-ring 3.6s ease-in-out infinite;
-  }
-
-  .animate-elite-icon-breathe {
-    animation: elite-icon-breathe 3s ease-in-out infinite;
-  }
-
-  .animate-elite-shimmer-sweep {
-    animation: elite-shimmer-sweep 4.5s ease-in-out infinite;
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .animate-hologram-pulse,
     .animate-hologram-sweep,
-    .animate-hologram-shimmer,
-    .animate-elite-glow-ring,
-    .animate-elite-icon-breathe,
-    .animate-elite-shimmer-sweep {
+    .animate-hologram-shimmer {
       animation: none;
     }
   }
@@ -122,45 +107,6 @@
   }
   100% {
     background-position: 180% 60%;
-  }
-}
-
-/* Über-uns Icons: Elite-Glow */
-@keyframes elite-glow-ring {
-  0%,
-  100% {
-    opacity: 0.45;
-    transform: scale(1);
-    filter: blur(12px);
-  }
-  50% {
-    opacity: 0.95;
-    transform: scale(1.12);
-    filter: blur(16px);
-  }
-}
-
-@keyframes elite-icon-breathe {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.35)) drop-shadow(0 0 14px rgba(56, 189, 248, 0.15));
-    opacity: 0.92;
-  }
-  50% {
-    filter: drop-shadow(0 0 14px rgba(251, 191, 36, 0.75)) drop-shadow(0 0 28px rgba(56, 189, 248, 0.35));
-    opacity: 1;
-  }
-}
-
-@keyframes elite-shimmer-sweep {
-  0%,
-  100% {
-    opacity: 0.88;
-    filter: brightness(1) saturate(1.05);
-  }
-  50% {
-    opacity: 1;
-    filter: brightness(1.22) saturate(1.2);
   }
 }
 
