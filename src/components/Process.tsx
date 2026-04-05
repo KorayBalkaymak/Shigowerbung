@@ -87,10 +87,11 @@ const Process = () => {
             <span className="h-px w-8 bg-gradient-to-l from-transparent to-neutral-400/60" aria-hidden />
           </div>
           <h2 className="mb-5 bg-gradient-to-b from-neutral-900 to-neutral-600 bg-clip-text text-5xl font-extralight tracking-tight text-transparent md:text-6xl md:leading-[1.08]">
-            Unser Prozess
+            Professioneller Ablauf für Werbung, Design und Druck
           </h2>
-          <p className="mx-auto max-w-xl text-base font-light leading-relaxed text-neutral-500 md:text-lg">
-            Klar strukturiert. Präzise verbunden. So entsteht messbare Exzellenz.
+          <p className="mx-auto max-w-2xl text-base font-light leading-relaxed text-neutral-500 md:text-lg">
+            Von Analyse bis Ergebnis: transparenter Projektweg für 3D-Reklame, Print und Markenauftritt –
+            für Läden und Unternehmen in Braunschweig und der Region.
           </p>
         </div>
 
