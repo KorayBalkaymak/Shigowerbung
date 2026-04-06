@@ -197,11 +197,11 @@ const Process = () => {
                         {step.title}
                       </h3>
 
-                      <p className="relative z-10 max-w-[13.5rem] text-[0.8125rem] font-light leading-relaxed text-neutral-500 md:text-sm">
+                      <p className="relative z-10 line-clamp-4 max-w-[13.5rem] text-[0.8125rem] font-light leading-relaxed text-neutral-500 md:text-sm">
                         {step.description}
                       </p>
 
-                      <div className="pointer-events-none absolute inset-x-12 bottom-5 h-px bg-gradient-to-r from-transparent via-neutral-300/60 to-transparent opacity-60" />
+                      <div className="pointer-events-none absolute inset-x-10 bottom-5 z-20 h-px bg-gradient-to-r from-transparent via-neutral-900/55 to-transparent opacity-90" />
                     </div>
                   </div>
 
@@ -225,7 +225,7 @@ const Process = () => {
                   )}
                 </div>
 
-                {/* Horizontale Verbindung — lg */}
+                {/* Horizontale Verbindung nach rechts — lg (Schritte 1–3) */}
                 {index < steps.length - 1 && (
                   <div
                     className="absolute top-1/2 z-10 hidden w-[calc(1.35rem+0.75rem)] -translate-y-1/2 items-center overflow-hidden lg:flex -right-[1.35rem]"
@@ -243,6 +243,27 @@ const Process = () => {
                     >
                       <div className="h-[2px] flex-1 rounded-full bg-gradient-to-r from-neutral-800/90 via-neutral-500/70 to-neutral-400/50 shadow-[0_0_12px_rgba(15,23,42,0.12)]" />
                       <div className="ml-0.5 h-2.5 w-2.5 shrink-0 rounded-full border border-neutral-300 bg-neutral-900 shadow-[0_0_0_3px_rgba(255,255,255,0.9),0_0_20px_rgba(15,23,42,0.2)] transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                  </div>
+                )}
+
+                {/* Eingehender schwarzer Strich von links — lg nur Ergebnis (Punkt sitzt am Strich von Schritt 3) */}
+                {index === steps.length - 1 && (
+                  <div
+                    className="absolute top-1/2 z-10 hidden w-[calc(1.35rem+0.75rem)] -translate-y-1/2 items-center overflow-hidden lg:flex -left-[1.35rem]"
+                    aria-hidden
+                  >
+                    <div
+                      className="flex w-full shrink-0 items-center will-change-transform transition-transform ease-[cubic-bezier(0.22,1,0.36,1)]"
+                      style={{
+                        transform: linesActive ? 'translateX(0)' : 'translateX(100%)',
+                        transitionDuration: '680ms',
+                        transitionDelay: linesActive
+                          ? `${BRANCH_BASE_MS + (index - 1) * BRANCH_STAGGER_MS}ms`
+                          : '0ms',
+                      }}
+                    >
+                      <div className="h-[2px] w-full rounded-full bg-gradient-to-r from-neutral-400/50 via-neutral-800/90 to-neutral-800/90 shadow-[0_0_12px_rgba(15,23,42,0.12)]" />
                     </div>
                   </div>
                 )}
