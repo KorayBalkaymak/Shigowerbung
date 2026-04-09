@@ -7,6 +7,7 @@ import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Impressum from './components/Impressum';
+import Datenschutz from './components/Datenschutz';
 
 function App() {
   const [routeKey, setRouteKey] = useState(() => {
@@ -29,6 +30,9 @@ function App() {
 
   if (routeKey === '/impressum' || routeKey.endsWith('#impressum')) {
     return <Impressum />;
+  }
+  if (routeKey === '/datenschutz' || routeKey.endsWith('#datenschutz')) {
+    return <Datenschutz />;
   }
 
   return (

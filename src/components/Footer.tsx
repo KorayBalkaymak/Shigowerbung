@@ -18,7 +18,7 @@ const Footer = () => {
 
           <div className="flex gap-6">
             <a
-              href="#"
+              href="#datenschutz"
               className="text-white/40 hover:text-white text-sm font-light transition-colors"
             >
               Datenschutz
