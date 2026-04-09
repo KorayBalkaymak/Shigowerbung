@@ -29,7 +29,7 @@ const Hero = () => {
 
         <button
           onClick={scrollToContact}
-          className="group relative inline-flex items-center gap-3 overflow-hidden border border-[#ffd8ab]/50 bg-[#fff0de] px-8 py-4 text-sm font-medium tracking-wide text-[#7a2b00] transition-all duration-300 hover:scale-105 hover:bg-[#ffe7cc] animate-fadeInUp-more-delayed"
+          className="group relative inline-flex items-center gap-3 overflow-hidden border border-[#e6d5bf] bg-[#F5E6D3] px-8 py-4 text-sm font-medium tracking-wide text-[#7a2b00] transition-all duration-300 hover:scale-105 hover:bg-[#ecdbc7] animate-fadeInUp-more-delayed"
         >
           <span className="relative z-10">Kontakt aufnehmen</span>
           <ArrowRight className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
