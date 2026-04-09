@@ -11,12 +11,12 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#ff7a00]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#E86100]"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#ffb14a] via-[#ff7a00] to-[#ff4d00]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_45%,rgba(255,226,183,0.45),transparent_52%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,196,124,0.24),transparent_32%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_80%,rgba(255,221,176,0.2),transparent_30%)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#ff9a3d] via-[#E86100] to-[#b94800]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_45%,rgba(255,229,191,0.44),transparent_52%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,204,143,0.24),transparent_32%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_80%,rgba(255,227,187,0.2),transparent_30%)]"></div>
         <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_35%,rgba(255,255,255,0.08)_55%,rgba(255,255,255,0)_75%)]"></div>
         <div className="absolute top-1/4 left-1/4 h-[28rem] w-[28rem] rounded-full bg-amber-100/30 blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-1/4 right-1/4 h-[24rem] w-[24rem] rounded-full bg-orange-100/28 blur-3xl animate-pulse-slow-delayed"></div>
