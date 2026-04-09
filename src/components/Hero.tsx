@@ -13,18 +13,11 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#E86100]"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#ff9a3d] via-[#E86100] to-[#b94800]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_45%,rgba(255,229,191,0.44),transparent_52%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,204,143,0.24),transparent_32%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_80%,rgba(255,227,187,0.2),transparent_30%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_35%,rgba(255,255,255,0.08)_55%,rgba(255,255,255,0)_75%)]"></div>
-        <div className="absolute top-1/4 left-1/4 h-[28rem] w-[28rem] rounded-full bg-amber-100/30 blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 h-[24rem] w-[24rem] rounded-full bg-orange-100/28 blur-3xl animate-pulse-slow-delayed"></div>
-      </div>
+      <div className="absolute inset-0 bg-[#E86100]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <h1 className="mb-6 max-w-4xl mx-auto text-4xl font-thin tracking-tight text-white animate-fadeInUp sm:text-5xl md:text-6xl md:leading-[1.12] lg:text-7xl">
-          <span className="block bg-gradient-to-r from-[#fff7e9] via-[#ffd39f] to-[#ffb16a] bg-clip-text text-transparent">
+          <span className="block text-white">
             Werbung für Läden &amp; Unternehmen
           </span>
         </h1>
@@ -36,11 +29,10 @@ const Hero = () => {
 
         <button
           onClick={scrollToContact}
-          className="group relative inline-flex items-center gap-3 overflow-hidden border border-[#ffd8ab]/50 bg-gradient-to-r from-[#fff0de] to-[#ffd9b0] px-8 py-4 text-sm font-medium tracking-wide text-[#7a2b00] transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_38px_-14px_rgba(255,173,92,0.7)] animate-fadeInUp-more-delayed"
+          className="group relative inline-flex items-center gap-3 overflow-hidden border border-[#ffd8ab]/50 bg-[#fff0de] px-8 py-4 text-sm font-medium tracking-wide text-[#7a2b00] transition-all duration-300 hover:scale-105 hover:bg-[#ffe7cc] animate-fadeInUp-more-delayed"
         >
           <span className="relative z-10">Kontakt aufnehmen</span>
           <ArrowRight className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#fff7ed] to-[#ffe7cc] opacity-0 transition-opacity group-hover:opacity-100"></div>
         </button>
       </div>
     </section>
