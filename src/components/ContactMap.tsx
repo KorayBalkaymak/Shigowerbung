@@ -1,5 +1,10 @@
 import { MapPin } from 'lucide-react';
-import { DEFAULT_GOOGLE_MAPS_EMBED_URL, SITE_ADDRESS } from '../config/site';
+import { useCookieConsent } from '../context/CookieConsentContext';
+import {
+  DEFAULT_GOOGLE_MAPS_EMBED_URL,
+  GOOGLE_MAPS_OPEN_URL,
+  SITE_ADDRESS,
+} from '../config/site';
 
 type ContactMapProps = {
   /** Direkt unter dem Kontakt-Einleitungstext: nur Karte, ohne zweite große Überschrift */
@@ -7,6 +12,8 @@ type ContactMapProps = {
 };
 
 const ContactMap = ({ variant = 'default' }: ContactMapProps) => {
+  const { preferences, enableExternalMedia } = useCookieConsent();
+  const allowEmbed = preferences?.externalMedia === true;
   const src = import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL || DEFAULT_GOOGLE_MAPS_EMBED_URL;
   const underIntro = variant === 'under-intro';
 
@@ -57,14 +64,40 @@ const ContactMap = ({ variant = 'default' }: ContactMapProps) => {
               aria-hidden
             />
 
-            <iframe
-              title="Standort auf Google Maps"
-              src={src}
-              className="relative z-0 block w-full h-[min(14rem,42vh)] min-h-[14rem] md:h-[min(26rem,55vh)] md:min-h-[16rem] border-0 grayscale-[0.35] contrast-[1.08] brightness-[0.88] saturate-[0.85] transition-[filter,transform] duration-700 ease-out group-hover:grayscale-[0.15] group-hover:brightness-[0.96] md:group-hover:scale-[1.008]"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
+            {allowEmbed ? (
+              <iframe
+                title="Standort auf Google Maps"
+                src={src}
+                className="relative z-0 block w-full h-[min(14rem,42vh)] min-h-[14rem] md:h-[min(26rem,55vh)] md:min-h-[16rem] border-0 grayscale-[0.35] contrast-[1.08] brightness-[0.88] saturate-[0.85] transition-[filter,transform] duration-700 ease-out group-hover:grayscale-[0.15] group-hover:brightness-[0.96] md:group-hover:scale-[1.008]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            ) : (
+              <div className="relative z-0 flex min-h-[14rem] w-full flex-col items-center justify-center gap-4 bg-black/40 px-6 py-10 text-center md:min-h-[16rem] md:py-14">
+                <p className="max-w-md text-sm font-light leading-relaxed text-white/85">
+                  Die eingebettete Karte wird von Google bereitgestellt. Bitte stimmen Sie der Nutzung
+                  externer Inhalte zu, um die Karte hier anzuzeigen.
+                </p>
+                <div className="flex flex-col items-center gap-3 sm:flex-row">
+                  <button
+                    type="button"
+                    onClick={enableExternalMedia}
+                    className="rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] px-5 py-2.5 text-sm font-light text-black/85 transition-colors hover:bg-[#ecdbc7]"
+                  >
+                    Externe Inhalte &amp; Karte aktivieren
+                  </button>
+                  <a
+                    href={GOOGLE_MAPS_OPEN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-light text-white/70 underline decoration-white/30 underline-offset-2 transition-colors hover:text-white"
+                  >
+                    Standort in Google Maps öffnen
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

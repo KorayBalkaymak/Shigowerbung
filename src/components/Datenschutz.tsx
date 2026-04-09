@@ -46,23 +46,61 @@ const Datenschutz = () => {
 
           <section className="space-y-2">
             <h2 className="text-xl font-medium text-black">4. Kontaktaufnahme</h2>
-            <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage gespeichert.</p>
+            <p>
+              Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage
+              gespeichert.
+            </p>
             <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO</p>
+            <p className="pt-2">
+              Nutzen Sie unser Kontaktformular, werden die von Ihnen eingegebenen Daten (z.&nbsp;B. Name,
+              E-Mail-Adresse, optional Telefonnummer und Nachricht) zur Bearbeitung Ihrer Anfrage
+              verarbeitet und bei Nutzung der technischen Infrastruktur in einer Datenbank beim Anbieter
+              Supabase (Supabase Inc.) gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO
+              (Vertragsanbahnung bzw. Beantwortung Ihrer Anfrage).
+            </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="text-xl font-medium text-black">5. Hosting</h2>
             <p>
-              Unsere Website wird bei einem externen Dienstleister gehostet. Die Verarbeitung erfolgt auf
-              Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb).
+              Unsere Website wird bei Vercel Inc. (Hosting-Plattform) bereitgestellt. Dabei werden
+              insbesondere technische Zugriffsdaten verarbeitet, die zum sicheren und stabilen Betrieb der
+              Seite erforderlich sind. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse
+              an sicherem und performantem Webauftritt).
             </p>
           </section>
 
-          <section className="space-y-2">
-            <h2 className="text-xl font-medium text-black">6. Cookies</h2>
-            <p>Unsere Website verwendet ggf. Cookies.</p>
-            <p>Cookies richten auf Ihrem Geraet keinen Schaden an.</p>
-            <p>Sie koennen die Speicherung von Cookies ueber Ihre Browser-Einstellungen verhindern.</p>
+          <section className="space-y-3">
+            <h2 className="text-xl font-medium text-black">6. Cookies und Einwilligungen</h2>
+            <p>
+              Beim Besuch unserer Website können Cookies oder vergleichbare Technologien (z.&nbsp;B.
+              Local Storage) verwendet werden. Über die Cookie-Hinweisleiste am unteren Bildschirmrand
+              können Sie freiwillig zustimmen zu:
+            </p>
+            <ul className="list-inside list-disc space-y-1 pl-1">
+              <li>
+                <strong className="font-medium text-black">Notwendig:</strong> Speicherung Ihrer
+                Cookie-Einstellungen (technisch erforderlich für die Auswahl), Rechtsgrundlage Art. 6
+                Abs. 1 lit. f DSGVO bzw. bei Einwilligung Art. 6 Abs. 1 lit. a DSGVO.
+              </li>
+              <li>
+                <strong className="font-medium text-black">Statistik (optional):</strong> Sofern Sie
+                zustimmen, kann eine Webanalyse (z.&nbsp;B. Google Analytics) geladen werden, um die Nutzung
+                der Website auszuwerten. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Die Einbindung erfolgt
+                erst nach Ihrer Einwilligung.
+              </li>
+              <li>
+                <strong className="font-medium text-black">Externe Inhalte (optional):</strong> Die
+                eingebettete Google-Maps-Karte wird nur geladen, wenn Sie der Verarbeitung durch Google
+                zustimmen. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Ohne Zustimmung können Sie den
+                Standort alternativ über einen Link zu Google Maps öffnen.
+              </li>
+            </ul>
+            <p>
+              Sie können Ihre Auswahl jederzeit über &quot;Cookie-Einstellungen&quot; im Footer ändern.
+              Allgemein können Sie die Speicherung von Cookies auch in Ihren Browser-Einstellungen
+              einschränken oder unterbinden.
+            </p>
           </section>
 
           <section className="space-y-2">
@@ -90,6 +128,14 @@ const Datenschutz = () => {
             <h2 className="text-xl font-medium text-black">10. Aenderungen der Datenschutzerklaerung</h2>
             <p>Wir behalten uns vor, diese Datenschutzerklaerung bei Bedarf anzupassen.</p>
           </section>
+
+          <p className="border-t border-black/10 pt-6 text-sm font-light text-black/70">
+            Cookie-Einstellungen können Sie jederzeit über den Link{' '}
+            <a href="#cookies" className="underline decoration-black/30 underline-offset-2 hover:text-black">
+              Cookie-Einstellungen
+            </a>{' '}
+            ändern (Sie gelangen zur Startseite; die Einstellungen öffnen sich am unteren Rand).
+          </p>
         </div>
       </div>
     </main>

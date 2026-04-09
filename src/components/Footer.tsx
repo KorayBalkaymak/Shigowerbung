@@ -16,7 +16,13 @@ const Footer = () => {
             © 2024 shigowerbung. Alle Rechte vorbehalten.
           </div>
 
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:justify-end">
+            <a
+              href="#cookies"
+              className="text-white/40 hover:text-white text-sm font-light transition-colors"
+            >
+              Cookie-Einstellungen
+            </a>
             <a
               href="#datenschutz"
               className="text-white/40 hover:text-white text-sm font-light transition-colors"
