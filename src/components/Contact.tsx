@@ -43,6 +43,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -65,7 +66,7 @@ const Contact = () => {
       if (error) throw error;
 
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '' });
 
       setTimeout(() => {
         setSubmitStatus('idle');
@@ -223,6 +224,17 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Email"
+                className="w-full rounded-lg border border-[#ddc8ad] bg-[#f9ecdd] px-6 py-4 font-light text-black/85 placeholder:text-black/40 transition-all focus:outline-none focus:border-[#c9ae8a] focus:bg-[#fff4e8]"
+              />
+            </div>
+
+            <div>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Telefonnummer (optional)"
                 className="w-full rounded-lg border border-[#ddc8ad] bg-[#f9ecdd] px-6 py-4 font-light text-black/85 placeholder:text-black/40 transition-all focus:outline-none focus:border-[#c9ae8a] focus:bg-[#fff4e8]"
               />
             </div>
