@@ -33,7 +33,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid gap-4 pt-8 md:grid-cols-3">
+            <div className="space-y-4 pt-8">
               {[
                 {
                   code: '01',
@@ -53,14 +53,14 @@ const About = () => {
               ].map((item) => (
                 <article
                   key={item.code}
-                  className="group relative overflow-hidden rounded-2xl border border-white/20 bg-white/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-white/35"
+                  className="group relative overflow-hidden rounded-[1.75rem] border border-[#ddc8ad] bg-[#F5E6D3] p-5 pl-20 text-[#2b1a0d] shadow-[0_10px_26px_-14px_rgba(0,0,0,0.55)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-22px_rgba(0,0,0,0.6)]"
                 >
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#F5E6D3]/60 to-transparent opacity-70" />
-                  <div className="mb-4 inline-flex rounded-lg border border-[#F5E6D3]/50 bg-[#F5E6D3]/20 px-3 py-1 font-mono text-xs tracking-[0.25em] text-[#F5E6D3]">
+                  <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-[#E86100] to-[#a93f00]" />
+                  <div className="absolute left-5 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#cfae87] bg-[#fff8ef] font-mono text-xs tracking-[0.2em] text-[#8a3500] shadow-sm">
                     {item.code}
                   </div>
-                  <h3 className="mb-2 text-white font-light text-lg leading-snug">{item.title}</h3>
-                  <p className="text-white/80 text-sm font-light leading-relaxed">{item.text}</p>
+                  <h3 className="mb-1 text-lg font-semibold leading-snug text-[#2b1a0d]">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-[#4a2e1a]/90">{item.text}</p>
                 </article>
               ))}
             </div>
