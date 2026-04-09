@@ -64,32 +64,27 @@ const Process = () => {
     <section
       ref={sectionRef}
       id="process"
-      className="relative z-10 w-full overflow-visible py-28 md:py-36"
-      style={{
-        backgroundColor: '#ffffff',
-        backgroundImage:
-          'linear-gradient(180deg, #ffffff 0%, rgb(252, 254, 255) 44%, #ffffff 100%)',
-      }}
+      className="relative z-10 w-full overflow-visible py-28 md:py-36 bg-black/95"
     >
-      {/* Hochglanz-Reflex (nur kühles Weiß, kein Grau) */}
+      {/* Dezenter Reflex auf schwarzem Hintergrund */}
       <div
-        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_115%_65%_at_50%_-12%,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_58%)]"
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_115%_65%_at_50%_-12%,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0)_58%)]"
         aria-hidden
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-16 text-center md:mb-24">
           <div className="mb-5 inline-flex items-center gap-3">
-            <span className="h-px w-8 bg-gradient-to-r from-transparent to-neutral-400/60" aria-hidden />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-neutral-400">
+            <span className="h-px w-8 bg-gradient-to-r from-transparent to-white/40" aria-hidden />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-white/70">
               ABLAUF
             </span>
-            <span className="h-px w-8 bg-gradient-to-l from-transparent to-neutral-400/60" aria-hidden />
+            <span className="h-px w-8 bg-gradient-to-l from-transparent to-white/40" aria-hidden />
           </div>
-          <h2 className="mb-5 bg-gradient-to-b from-neutral-900 to-neutral-600 bg-clip-text text-3xl font-extralight tracking-tight text-transparent sm:text-4xl md:text-5xl md:leading-[1.12] lg:text-6xl lg:leading-[1.08]">
+          <h2 className="mb-5 bg-gradient-to-b from-white to-white/70 bg-clip-text text-3xl font-extralight tracking-tight text-transparent sm:text-4xl md:text-5xl md:leading-[1.12] lg:text-6xl lg:leading-[1.08]">
             Transparenter Ablauf für 3D-Reklame, Drucksachen und Markenauftritt
           </h2>
-          <p className="mx-auto max-w-2xl text-base font-light leading-relaxed text-neutral-500 md:text-lg">
+          <p className="mx-auto max-w-2xl text-base font-light leading-relaxed text-white/70 md:text-lg">
             Vier klare Schritte von der Analyse bis zum Ergebnis – partnerschaftlich begleitet für Läden und
             Unternehmen in Braunschweig und Umgebung.
           </p>

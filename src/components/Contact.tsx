@@ -86,7 +86,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-32 bg-gradient-to-b from-gray-900 to-black">
+    <section id="contact" className="relative py-32 bg-[#E86100]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-8 md:mb-10">
           <div className="text-sm font-light text-white/40 tracking-widest mb-4">
