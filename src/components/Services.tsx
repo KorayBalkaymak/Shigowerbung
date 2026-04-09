@@ -57,38 +57,38 @@ const Services = () => {
               <div className="absolute -inset-px rounded-2xl opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100 bg-[radial-gradient(400px_120px_at_50%_-20%,rgba(255,255,255,0.12),transparent)]" />
 
               <div
-                className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0c0d12]/90 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_24px_-8px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-500 group-hover:border-white/[0.14] group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_24px_64px_-16px_rgba(0,0,0,0.65)]"
+                className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.55),0_4px_24px_-8px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-all duration-500 group-hover:border-[#dbc4a8] group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.7),0_24px_64px_-16px_rgba(0,0,0,0.28)]"
               >
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent opacity-70 transition-opacity group-hover:opacity-100" />
-                <div className="absolute left-4 top-4 h-6 w-6 border-l border-t border-white/15 transition-colors group-hover:border-white/30" aria-hidden />
-                <div className="absolute right-4 top-4 h-6 w-6 border-r border-t border-white/15 transition-colors group-hover:border-white/30" aria-hidden />
-                <div className="absolute bottom-4 left-4 h-6 w-6 border-b border-l border-white/10 transition-colors group-hover:border-white/25" aria-hidden />
-                <div className="absolute bottom-4 right-4 h-6 w-6 border-b border-r border-white/10 transition-colors group-hover:border-white/25" aria-hidden />
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/20 to-transparent opacity-70 transition-opacity group-hover:opacity-100" />
+                <div className="absolute left-4 top-4 h-6 w-6 border-l border-t border-black/15 transition-colors group-hover:border-black/25" aria-hidden />
+                <div className="absolute right-4 top-4 h-6 w-6 border-r border-t border-black/15 transition-colors group-hover:border-black/25" aria-hidden />
+                <div className="absolute bottom-4 left-4 h-6 w-6 border-b border-l border-black/10 transition-colors group-hover:border-black/20" aria-hidden />
+                <div className="absolute bottom-4 right-4 h-6 w-6 border-b border-r border-black/10 transition-colors group-hover:border-black/20" aria-hidden />
 
-                <div className="absolute right-5 top-5 font-mono text-[10px] font-medium tabular-nums tracking-[0.2em] text-white/25 transition-colors group-hover:text-white/40">
+                <div className="absolute right-5 top-5 font-mono text-[10px] font-medium tabular-nums tracking-[0.2em] text-black/30 transition-colors group-hover:text-black/45">
                   {String(index + 1).padStart(2, '0')}
                 </div>
 
                 <div className="relative flex flex-1 flex-col p-8 pt-10">
-                  <div className="mb-7 inline-flex w-fit rounded-lg bg-white/[0.04] p-3.5 ring-1 ring-white/10 transition-all duration-500 group-hover:bg-white/[0.07] group-hover:ring-white/25 group-hover:shadow-[0_0_32px_-8px_rgba(255,255,255,0.15)]">
-                    <service.icon className="h-7 w-7 text-white/90 transition-transform duration-500 group-hover:scale-[1.03]" strokeWidth={1.25} />
+                  <div className="mb-7 inline-flex w-fit rounded-lg bg-black/[0.04] p-3.5 ring-1 ring-black/10 transition-all duration-500 group-hover:bg-black/[0.07] group-hover:ring-black/20 group-hover:shadow-[0_0_32px_-8px_rgba(0,0,0,0.2)]">
+                    <service.icon className="h-7 w-7 text-black/85 transition-transform duration-500 group-hover:scale-[1.03]" strokeWidth={1.25} />
                   </div>
 
-                  <h3 className="mb-4 text-xl font-light leading-snug tracking-tight text-white transition-colors duration-300 group-hover:text-white md:text-[1.35rem]">
+                  <h3 className="mb-4 text-xl font-light leading-snug tracking-tight text-black transition-colors duration-300 group-hover:text-black md:text-[1.35rem]">
                     {service.title}
                   </h3>
 
-                  <p className="flex-1 text-sm font-light leading-relaxed text-white/45 transition-colors duration-300 group-hover:text-white/65 md:text-[0.9375rem]">
+                  <p className="flex-1 text-sm font-light leading-relaxed text-black/65 transition-colors duration-300 group-hover:text-black/80 md:text-[0.9375rem]">
                     {service.description}
                   </p>
 
-                  <div className="mt-8 flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.25em] text-white/30 transition-colors group-hover:text-white/50">
-                    <span className="h-px w-6 bg-gradient-to-r from-white/40 to-transparent" />
+                  <div className="mt-8 flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.25em] text-black/45 transition-colors group-hover:text-black/65">
+                    <span className="h-px w-6 bg-gradient-to-r from-black/35 to-transparent" />
                     Exklusive Umsetzung
                   </div>
                 </div>
 
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-black/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </div>
             </article>
           ))}
