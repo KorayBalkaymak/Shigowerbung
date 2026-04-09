@@ -127,36 +127,36 @@ const Process = () => {
                   <div className="relative mx-auto mb-1 w-full max-w-[min(100%,288px)]">
                     {/* Hologram-Boden — weich maskiert, ohne kastige Raster-Linien */}
                     <div
-                      className="pointer-events-none absolute left-1/2 top-[76%] z-0 h-[38%] w-[93%] -translate-x-1/2 overflow-hidden rounded-[100%] shadow-[0_28px_56px_-16px_rgba(23,37,84,0.45),0_0_60px_-8px_rgba(59,130,246,0.32)] [mask-image:radial-gradient(ellipse_95%_100%_at_50%_18%,#000_52%,transparent_78%)]"
+                      className="pointer-events-none absolute left-1/2 top-[76%] z-0 h-[38%] w-[93%] -translate-x-1/2 overflow-hidden rounded-[100%] shadow-[0_28px_56px_-16px_rgba(146,64,14,0.45),0_0_60px_-8px_rgba(234,88,12,0.32)] [mask-image:radial-gradient(ellipse_95%_100%_at_50%_18%,#000_52%,transparent_78%)]"
                       aria-hidden
                     >
-                      <div className="absolute inset-0 bg-gradient-to-b from-[#071018] via-[#020617] to-[#010409]" />
-                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_85%_at_50%_0%,rgba(37,99,235,0.35),transparent_68%)] opacity-90" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#1c0d04] via-[#100803] to-[#090502]" />
+                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_85%_at_50%_0%,rgba(234,88,12,0.35),transparent_68%)] opacity-90" />
                       <div
                         className="absolute -inset-[30%] animate-hologram-sweep opacity-[0.28] blur-[0.35px]"
                         style={{
                           backgroundImage:
-                            'repeating-linear-gradient(0deg, transparent, transparent 6px, rgba(96,165,250,0.14) 6px, rgba(96,165,250,0.14) 7px)',
+                            'repeating-linear-gradient(0deg, transparent, transparent 6px, rgba(251,146,60,0.16) 6px, rgba(251,146,60,0.16) 7px)',
                         }}
                       />
-                      <div className="absolute inset-0 animate-hologram-pulse bg-[radial-gradient(ellipse_95%_75%_at_50%_5%,rgba(59,130,246,0.42),transparent_66%)]" />
+                      <div className="absolute inset-0 animate-hologram-pulse bg-[radial-gradient(ellipse_95%_75%_at_50%_5%,rgba(249,115,22,0.44),transparent_66%)]" />
                       <div
                         className="absolute inset-0 animate-hologram-shimmer opacity-[0.42] mix-blend-screen"
                         style={{
                           backgroundImage:
-                            'linear-gradient(118deg, transparent 0%, rgba(56,189,248,0.12) 32%, transparent 54%, rgba(129,140,248,0.1) 76%, transparent 100%)',
+                            'linear-gradient(118deg, transparent 0%, rgba(251,146,60,0.13) 32%, transparent 54%, rgba(234,88,12,0.12) 76%, transparent 100%)',
                           backgroundSize: '220% 220%',
                         }}
                       />
-                      <div className="absolute inset-0 bg-[conic-gradient(from_200deg_at_50%_120%,transparent_0deg,rgba(56,189,248,0.08)_38deg,transparent_78deg)] opacity-70" />
-                      <div className="absolute inset-x-0 bottom-0 top-[58%] bg-gradient-to-t from-blue-600/28 via-blue-900/5 to-transparent" />
-                      <div className="absolute bottom-0.5 left-1/2 h-[46%] w-[1.5px] max-w-full -translate-x-1/2 bg-gradient-to-t from-sky-300/55 via-blue-500/35 to-transparent blur-[1px]" />
-                      <div className="absolute bottom-1.5 left-1/2 h-3 w-[5rem] max-w-[78%] -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-sky-400/35 to-transparent blur-lg" />
+                      <div className="absolute inset-0 bg-[conic-gradient(from_200deg_at_50%_120%,transparent_0deg,rgba(251,146,60,0.1)_38deg,transparent_78deg)] opacity-70" />
+                      <div className="absolute inset-x-0 bottom-0 top-[58%] bg-gradient-to-t from-orange-500/28 via-orange-900/5 to-transparent" />
+                      <div className="absolute bottom-0.5 left-1/2 h-[46%] w-[1.5px] max-w-full -translate-x-1/2 bg-gradient-to-t from-orange-300/55 via-orange-500/35 to-transparent blur-[1px]" />
+                      <div className="absolute bottom-1.5 left-1/2 h-3 w-[5rem] max-w-[78%] -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-orange-400/35 to-transparent blur-lg" />
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/[0.03]" />
                     </div>
-                    {/* Außenringe — leicht ins Blau gezogen, zum Hologram-Boden */}
-                    <div className="pointer-events-none absolute -inset-[2px] z-[1] rounded-full bg-gradient-to-br from-slate-950 via-[#0c1826] to-blue-950 opacity-[0.97] shadow-[inset_0_1px_0_0_rgba(147,197,253,0.16)]" />
-                    <div className="pointer-events-none absolute -inset-[5px] z-[1] rounded-full bg-gradient-to-br from-blue-400/[0.09] via-transparent to-slate-950/55 blur-md opacity-90" />
+                    {/* Außenringe — in Orange getönt, passend zum Hologram-Boden */}
+                    <div className="pointer-events-none absolute -inset-[2px] z-[1] rounded-full bg-gradient-to-br from-[#1f1308] via-[#2d170a] to-[#5f2400] opacity-[0.97] shadow-[inset_0_1px_0_0_rgba(251,146,60,0.2)]" />
+                    <div className="pointer-events-none absolute -inset-[5px] z-[1] rounded-full bg-gradient-to-br from-orange-400/[0.14] via-transparent to-[#2d170a]/60 blur-md opacity-90" />
 
                     <div
                       className="relative z-10 mx-auto flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white/95 bg-gradient-to-b from-white via-neutral-50/98 to-[#f4f7fb] px-5 py-6 text-center shadow-[0_4px_6px_-1px_rgba(15,23,42,0.06),0_24px_48px_-12px_rgba(15,23,42,0.1),0_0_0_1px_rgba(255,255,255,0.85),inset_0_1px_0_0_rgba(255,255,255,0.98)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:border-white group-hover:shadow-[0_8px_30px_-8px_rgba(30,58,138,0.12),0_32px_64px_-20px_rgba(15,23,42,0.14)] md:px-6"
