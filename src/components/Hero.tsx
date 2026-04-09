@@ -11,15 +11,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#2a0f02]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#ff7a00]"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#221007] via-[#5f2400] to-[#a63d00]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_45%,rgba(255,188,112,0.34),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,156,74,0.18),transparent_32%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_80%,rgba(255,207,140,0.16),transparent_30%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0)_35%,rgba(255,255,255,0.05)_55%,rgba(255,255,255,0)_75%)]"></div>
-        <div className="absolute top-1/4 left-1/4 w-[28rem] h-[28rem] bg-amber-200/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[24rem] h-[24rem] bg-orange-200/20 rounded-full blur-3xl animate-pulse-slow-delayed"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#ffb14a] via-[#ff7a00] to-[#ff4d00]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_45%,rgba(255,226,183,0.45),transparent_52%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,196,124,0.24),transparent_32%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_80%,rgba(255,221,176,0.2),transparent_30%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_35%,rgba(255,255,255,0.08)_55%,rgba(255,255,255,0)_75%)]"></div>
+        <div className="absolute top-1/4 left-1/4 h-[28rem] w-[28rem] rounded-full bg-amber-100/30 blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 h-[24rem] w-[24rem] rounded-full bg-orange-100/28 blur-3xl animate-pulse-slow-delayed"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">

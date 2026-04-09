@@ -21,7 +21,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="relative z-20 w-full border-b border-[#ffcc9a]/20 bg-gradient-to-r from-[#2a1208]/95 via-[#4b1f07]/92 to-[#6a2908]/90 backdrop-blur-xl">
+    <nav className="relative z-20 w-full border-b border-[#ffd8ab]/30 bg-gradient-to-r from-[#ff8a1f]/95 via-[#ff6a00]/92 to-[#ff4d00]/90 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
