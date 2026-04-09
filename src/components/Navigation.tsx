@@ -21,12 +21,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="relative z-10 w-full border-b border-neutral-200/80 bg-white backdrop-blur-xl">
+    <nav className="relative z-20 w-full border-b border-[#ffcc9a]/20 bg-gradient-to-r from-[#2a1208]/95 via-[#4b1f07]/92 to-[#6a2908]/90 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-thin tracking-wider text-neutral-900 hover:text-neutral-600 transition-colors"
+            className="text-2xl font-thin tracking-wider text-[#ffe5c3] transition-colors hover:text-white"
           >
             shigowerbung
           </button>
@@ -36,7 +36,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-light text-neutral-600 hover:text-neutral-900 transition-colors tracking-wide"
+                className="text-sm font-light tracking-wide text-[#ffd3a5]/85 transition-colors hover:text-[#fff3e2]"
               >
                 {item.label}
               </button>
@@ -46,7 +46,7 @@ const Navigation = () => {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-neutral-900"
+            className="text-[#ffe5c3] md:hidden"
             aria-expanded={isMobileMenuOpen}
             aria-label={isMobileMenuOpen ? 'Menü schließen' : 'Menü öffnen'}
           >
@@ -55,12 +55,12 @@ const Navigation = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-2 border-t border-neutral-100 animate-fadeIn">
+          <div className="md:hidden animate-fadeIn border-t border-[#ffcc9a]/20 pb-2 pt-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 text-neutral-600 hover:text-neutral-900 transition-colors"
+                className="block w-full py-3 text-left text-[#ffd3a5]/90 transition-colors hover:text-[#fff3e2]"
               >
                 {item.label}
               </button>
