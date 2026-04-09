@@ -22,8 +22,8 @@ const ContactMap = ({ variant = 'default' }: ContactMapProps) => {
         <h3 className="sr-only">Standort {SITE_ADDRESS} auf Google Maps</h3>
       ) : (
         <div className="text-center mb-6 md:mb-10">
-          <div className="inline-flex items-center justify-center gap-2 text-sm font-light text-white/40 tracking-widest mb-3">
-            <MapPin className="w-4 h-4 text-white/50" aria-hidden />
+          <div className="inline-flex items-center justify-center gap-2 text-sm font-light text-white tracking-widest mb-3">
+            <MapPin className="h-4 w-4 text-white" aria-hidden />
             STANDORT
           </div>
           <h3 className="text-3xl md:text-4xl font-thin text-white tracking-tight">

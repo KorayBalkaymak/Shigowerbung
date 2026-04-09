@@ -89,13 +89,13 @@ const Contact = () => {
     <section id="contact" className="relative py-32 bg-[#E86100]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-8 md:mb-10">
-          <div className="text-sm font-light text-white/40 tracking-widest mb-4">
+          <div className="text-sm font-light text-white tracking-widest mb-4">
             KONTAKT
           </div>
           <h2 className="text-5xl md:text-6xl font-thin text-white mb-6">
             Lassen Sie uns sprechen
           </h2>
-          <p className="text-lg text-white/60 font-light max-w-2xl mx-auto">
+          <p className="text-lg text-white/85 font-light max-w-2xl mx-auto">
             Bereit für Ihr nächstes Projekt? Wir freuen uns auf Ihre Nachricht
           </p>
         </div>
@@ -115,13 +115,13 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp-Chat mit shigowerbung öffnen"
-            className="group/block relative block overflow-hidden rounded-2xl border border-white/[0.09] bg-gradient-to-br from-white/[0.08] via-white/[0.02] to-transparent p-[1px] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] transition-all duration-500 hover:border-emerald-400/25 hover:shadow-[0_0_48px_-16px_rgba(16,185,129,0.22)]"
+            className="group/block relative block overflow-hidden rounded-2xl border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.55),0_4px_24px_-8px_rgba(0,0,0,0.22)] transition-all duration-500 hover:border-[#dbc4a8] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.7),0_24px_48px_-16px_rgba(0,0,0,0.2)]"
           >
-            <div className="rounded-2xl bg-gradient-to-br from-neutral-900/95 to-black/90 px-5 py-4 backdrop-blur-sm">
+            <div className="px-5 py-4">
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] shadow-inner transition-all duration-300 group-hover/block:border-emerald-500/30 group-hover/block:bg-emerald-500/[0.07]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-black/[0.04] ring-1 ring-black/10 transition-all duration-300 group-hover/block:bg-black/[0.07] group-hover/block:ring-black/20">
                   <svg
-                    className="h-6 w-6 text-emerald-400/90 transition-transform duration-300 group-hover/block:scale-105"
+                    className="h-6 w-6 text-[#25D366] transition-transform duration-300 group-hover/block:scale-105"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden
@@ -130,15 +130,15 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="min-w-0 flex-1 text-left">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/35">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-black/55">
                     WhatsApp
                   </p>
-                  <p className="mt-1 text-sm font-light leading-snug text-white/85">
+                  <p className="mt-1 text-sm font-light leading-snug text-black/75">
                     Direkt und diskret — wir melden uns zeitnah. Der Text lässt sich vor dem Senden
                     anpassen.
                   </p>
                 </div>
-                <span className="hidden shrink-0 text-[11px] font-medium uppercase tracking-[0.2em] text-emerald-400/80 transition-colors sm:inline group-hover/block:text-emerald-300">
+                <span className="hidden shrink-0 text-[11px] font-medium uppercase tracking-[0.2em] text-black/55 transition-colors sm:inline group-hover/block:text-black/80">
                   Öffnen
                 </span>
               </div>
@@ -152,26 +152,26 @@ const Contact = () => {
           <div className="space-y-8">
             <div className="group">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10 group-hover:bg-white/10 transition-all">
-                  <Mail className="w-5 h-5 text-white/80" />
+                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
+                  <Mail className="h-5 w-5 text-black/85" strokeWidth={1.25} />
                 </div>
                 <div>
-                  <h3 className="text-white font-light text-lg mb-1">Email</h3>
-                  <p className="text-white/50 text-sm font-light">kontakt@shigowerbung.de</p>
+                  <h3 className="mb-1 text-lg font-light text-white">Email</h3>
+                  <p className="text-sm font-light text-white/90">kontakt@shigowerbung.de</p>
                 </div>
               </div>
             </div>
 
             <div className="group">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10 group-hover:bg-white/10 transition-all">
-                  <Phone className="w-5 h-5 text-white/80" />
+                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
+                  <Phone className="h-5 w-5 text-black/85" strokeWidth={1.25} />
                 </div>
                 <div>
-                  <h3 className="text-white font-light text-lg mb-1">Telefon</h3>
+                  <h3 className="mb-1 text-lg font-light text-white">Telefon</h3>
                   <a
                     href={SITE_PHONE_TEL}
-                    className="text-white/50 text-sm font-light transition-colors hover:text-white/80"
+                    className="text-sm font-light text-white/90 transition-colors hover:text-white"
                   >
                     {SITE_PHONE_DISPLAY}
                   </a>
@@ -181,16 +181,16 @@ const Contact = () => {
 
             <div className="group">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10 group-hover:bg-white/10 transition-all">
-                  <MapPin className="w-5 h-5 text-white/80" />
+                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
+                  <MapPin className="h-5 w-5 text-black/85" strokeWidth={1.25} />
                 </div>
                 <div>
-                  <h3 className="text-white font-light text-lg mb-1">Adresse</h3>
+                  <h3 className="mb-1 text-lg font-light text-white">Adresse</h3>
                   <a
                     href={GOOGLE_MAPS_OPEN_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/50 text-sm font-light leading-relaxed transition-colors hover:text-white/80"
+                    className="text-sm font-light leading-relaxed text-white/90 transition-colors hover:text-white"
                   >
                     {SITE_ADDRESS}
                   </a>

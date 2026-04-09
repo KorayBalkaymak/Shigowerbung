@@ -36,7 +36,7 @@ const Services = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-20 text-center">
-          <div className="mb-4 text-xs font-medium tracking-[0.35em] text-white/35">
+          <div className="mb-4 text-xs font-medium tracking-[0.35em] text-white">
             LEISTUNGEN
           </div>
           <h2 className="mb-6 text-5xl font-thin tracking-tight text-white md:text-6xl">

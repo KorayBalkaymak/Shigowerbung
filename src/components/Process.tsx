@@ -76,12 +76,12 @@ const Process = () => {
         <div className="mb-16 text-center md:mb-24">
           <div className="mb-5 inline-flex items-center gap-3">
             <span className="h-px w-8 bg-gradient-to-r from-transparent to-white/40" aria-hidden />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-white/70">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-white">
               ABLAUF
             </span>
             <span className="h-px w-8 bg-gradient-to-l from-transparent to-white/40" aria-hidden />
           </div>
-          <h2 className="mb-5 bg-gradient-to-b from-white to-white/70 bg-clip-text text-3xl font-extralight tracking-tight text-transparent sm:text-4xl md:text-5xl md:leading-[1.12] lg:text-6xl lg:leading-[1.08]">
+          <h2 className="mb-5 text-3xl font-extralight tracking-tight text-white sm:text-4xl md:text-5xl md:leading-[1.12] lg:text-6xl lg:leading-[1.08]">
             Transparenter Ablauf für 3D-Reklame, Drucksachen und Markenauftritt
           </h2>
           <p className="mx-auto max-w-2xl text-base font-light leading-relaxed text-white/70 md:text-lg">

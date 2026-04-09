@@ -5,13 +5,13 @@ const About = () => {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
             <div className="inline-block">
-              <div className="text-sm font-light text-white/70 tracking-widest mb-4">
+              <div className="text-sm font-light text-white tracking-widest mb-4">
                 ÜBER UNS
               </div>
               <h2 className="text-4xl font-thin leading-tight text-white sm:text-5xl md:text-6xl">
                 <span className="block sm:inline">Werbung, die bleibt</span>
-                <span className="hidden px-1 font-light text-white/70 sm:inline">·</span>
-                <span className="mt-1 block text-white/90 sm:mt-0 sm:inline">
+                <span className="hidden px-1 font-light text-white sm:inline">·</span>
+                <span className="mt-1 block text-white sm:mt-0 sm:inline">
                   Qualität, die zählt
                 </span>
               </h2>
