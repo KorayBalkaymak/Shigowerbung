@@ -101,9 +101,11 @@ const Contact = () => {
           </p>
         </div>
 
+        <ContactMap variant="under-intro" />
+
         <div
           ref={whatsappRef}
-          className={`mb-10 w-full max-w-6xl mx-auto md:mb-12 will-change-transform ${whatsappVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
+          className={`mb-10 mt-10 w-full max-w-6xl mx-auto md:mb-12 will-change-transform ${whatsappVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
           style={{
             opacity: whatsappVisible ? 1 : 0,
             transform: whatsappVisible ? 'translateY(0) scale(1)' : 'translateY(2rem) scale(0.92)',
@@ -147,59 +149,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <ContactMap variant="under-intro" />
-
-        <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto mt-14 md:mt-20">
-          <div className="space-y-8">
-            <div className="group">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
-                  <Mail className="h-5 w-5 text-black/85" strokeWidth={1.25} />
-                </div>
-                <div>
-                  <h3 className="mb-1 text-lg font-light text-white">Email</h3>
-                  <p className="text-sm font-light text-white/90">kontakt@shigowerbung.de</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="group">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
-                  <Phone className="h-5 w-5 text-black/85" strokeWidth={1.25} />
-                </div>
-                <div>
-                  <h3 className="mb-1 text-lg font-light text-white">Telefon</h3>
-                  <a
-                    href={SITE_PHONE_TEL}
-                    className="text-sm font-light text-white/90 transition-colors hover:text-white"
-                  >
-                    {SITE_PHONE_DISPLAY}
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="group">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
-                  <MapPin className="h-5 w-5 text-black/85" strokeWidth={1.25} />
-                </div>
-                <div>
-                  <h3 className="mb-1 text-lg font-light text-white">Adresse</h3>
-                  <a
-                    href={GOOGLE_MAPS_OPEN_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-light leading-relaxed text-white/90 transition-colors hover:text-white"
-                  >
-                    {SITE_ADDRESS}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="max-w-5xl mx-auto mt-14 md:mt-20">
           <form
             onSubmit={handleSubmit}
             className="space-y-6 rounded-2xl border border-[#e6d5bf] bg-[#F5E6D3] p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.55),0_4px_24px_-8px_rgba(0,0,0,0.22)] md:p-8"
@@ -282,6 +232,56 @@ const Contact = () => {
               </div>
             )}
           </form>
+
+          <div className="mt-10 space-y-8">
+            <div className="group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
+                  <Mail className="h-5 w-5 text-black/85" strokeWidth={1.25} />
+                </div>
+                <div>
+                  <h3 className="mb-1 text-lg font-light text-white">Email</h3>
+                  <p className="text-sm font-light text-white/90">kontakt@shigowerbung.de</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
+                  <Phone className="h-5 w-5 text-black/85" strokeWidth={1.25} />
+                </div>
+                <div>
+                  <h3 className="mb-1 text-lg font-light text-white">Telefon</h3>
+                  <a
+                    href={SITE_PHONE_TEL}
+                    className="text-sm font-light text-white/90 transition-colors hover:text-white"
+                  >
+                    {SITE_PHONE_DISPLAY}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg border border-[#e6d5bf] bg-[#F5E6D3] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.45)] transition-all group-hover:border-[#dbc4a8]">
+                  <MapPin className="h-5 w-5 text-black/85" strokeWidth={1.25} />
+                </div>
+                <div>
+                  <h3 className="mb-1 text-lg font-light text-white">Adresse</h3>
+                  <a
+                    href={GOOGLE_MAPS_OPEN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-light leading-relaxed text-white/90 transition-colors hover:text-white"
+                  >
+                    {SITE_ADDRESS}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
