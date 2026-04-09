@@ -159,7 +159,7 @@ const Process = () => {
                     <div className="pointer-events-none absolute -inset-[5px] z-[1] rounded-full bg-gradient-to-br from-orange-400/[0.14] via-transparent to-[#2d170a]/60 blur-md opacity-90" />
 
                     <div
-                      className="relative z-10 mx-auto flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-full border border-white/95 bg-gradient-to-b from-white via-neutral-50/98 to-[#f4f7fb] px-5 py-6 text-center shadow-[0_4px_6px_-1px_rgba(15,23,42,0.06),0_24px_48px_-12px_rgba(15,23,42,0.1),0_0_0_1px_rgba(255,255,255,0.85),inset_0_1px_0_0_rgba(255,255,255,0.98)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:border-white group-hover:shadow-[0_8px_30px_-8px_rgba(30,58,138,0.12),0_32px_64px_-20px_rgba(15,23,42,0.14)] md:px-6"
+                      className="relative z-10 mx-auto flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-full border border-[#e6d5bf] bg-[#F5E6D3] px-5 py-6 text-center shadow-[0_4px_6px_-1px_rgba(15,23,42,0.08),0_24px_48px_-12px_rgba(15,23,42,0.12),0_0_0_1px_rgba(255,255,255,0.35),inset_0_1px_0_0_rgba(255,255,255,0.72)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:border-[#dbc4a8] group-hover:shadow-[0_8px_30px_-8px_rgba(120,53,15,0.2),0_32px_64px_-20px_rgba(15,23,42,0.16)] md:px-6"
                     >
                       <div
                         className="pointer-events-none absolute inset-0 rounded-full opacity-[0.65]"
@@ -172,7 +172,7 @@ const Process = () => {
                         className="pointer-events-none absolute inset-0 rounded-full opacity-[0.35]"
                         style={{
                           background:
-                            'radial-gradient(ellipse 85% 55% at 50% 100%, rgba(219,234,254,0.35), transparent 52%)',
+                            'radial-gradient(ellipse 85% 55% at 50% 100%, rgba(245,230,211,0.45), transparent 52%)',
                         }}
                       />
                       <div
@@ -184,7 +184,7 @@ const Process = () => {
                         {step.number}
                       </span>
 
-                      <div className="relative z-10 mb-3.5 flex h-14 w-14 items-center justify-center rounded-full border border-neutral-200/75 bg-white/95 shadow-[0_8px_24px_-6px_rgba(30,58,138,0.1)] transition-all duration-500 group-hover:border-blue-200/60 group-hover:shadow-[0_12px_32px_-8px_rgba(37,99,235,0.15)]">
+                      <div className="relative z-10 mb-3.5 flex h-14 w-14 items-center justify-center rounded-full border border-[#dbc4a8] bg-[#F5E6D3] shadow-[0_8px_24px_-6px_rgba(120,53,15,0.18)] transition-all duration-500 group-hover:border-[#c6aa88] group-hover:shadow-[0_12px_32px_-8px_rgba(120,53,15,0.26)]">
                         <step.icon className="h-7 w-7 text-neutral-800" strokeWidth={1.15} />
                       </div>
 
