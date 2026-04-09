@@ -199,7 +199,10 @@ const Contact = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 rounded-2xl border border-[#e6d5bf] bg-[#F5E6D3] p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.55),0_4px_24px_-8px_rgba(0,0,0,0.22)] md:p-8"
+          >
             <div>
               <input
                 type="text"
@@ -208,7 +211,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Name"
-                className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/30 font-light focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                className="w-full rounded-lg border border-[#ddc8ad] bg-[#f9ecdd] px-6 py-4 font-light text-black/85 placeholder:text-black/40 transition-all focus:outline-none focus:border-[#c9ae8a] focus:bg-[#fff4e8]"
               />
             </div>
 
@@ -220,7 +223,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Email"
-                className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/30 font-light focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                className="w-full rounded-lg border border-[#ddc8ad] bg-[#f9ecdd] px-6 py-4 font-light text-black/85 placeholder:text-black/40 transition-all focus:outline-none focus:border-[#c9ae8a] focus:bg-[#fff4e8]"
               />
             </div>
 
@@ -232,14 +235,14 @@ const Contact = () => {
                 required
                 placeholder="Ihre Nachricht"
                 rows={6}
-                className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/30 font-light focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all resize-none"
+                className="w-full resize-none rounded-lg border border-[#ddc8ad] bg-[#f9ecdd] px-6 py-4 font-light text-black/85 placeholder:text-black/40 transition-all focus:outline-none focus:border-[#c9ae8a] focus:bg-[#fff4e8]"
               />
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group w-full px-8 py-4 bg-white text-black font-light text-sm tracking-wide rounded-lg hover:bg-white/90 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+              className="group flex w-full items-center justify-center gap-3 rounded-lg bg-black/90 px-8 py-4 text-sm font-light tracking-wide text-[#F5E6D3] transition-all duration-300 hover:scale-105 hover:bg-black disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isSubmitting ? (
                 'Wird gesendet...'
