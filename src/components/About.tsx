@@ -2,7 +2,7 @@ import { Shield, Award, Rocket } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="relative py-32 bg-white">
+    <section id="about" className="relative py-32 bg-[#28282b]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
