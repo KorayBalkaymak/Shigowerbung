@@ -1,5 +1,3 @@
-import { Shield, Award, Rocket } from 'lucide-react';
-
 const About = () => {
   return (
     <section id="about" className="relative py-32 bg-black/95">
@@ -35,42 +33,36 @@ const About = () => {
               </p>
             </div>
 
-            <div className="space-y-6 pt-8">
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-white/10 rounded-lg border border-white/20 group-hover:bg-white/15 group-hover:border-white/30 transition-all">
-                  <Shield className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-light text-lg mb-1">Vertrauen & Sicherheit</h3>
-                  <p className="text-white/80 text-sm font-light">
-                    Höchste Standards in Qualität und Datenschutz
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-white/10 rounded-lg border border-white/20 group-hover:bg-white/15 group-hover:border-white/30 transition-all">
-                  <Award className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-light text-lg mb-1">Exzellente Ergebnisse</h3>
-                  <p className="text-white/80 text-sm font-light">
-                    Messbare Resultate, die Ihre Erwartungen übertreffen
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-white/10 rounded-lg border border-white/20 group-hover:bg-white/15 group-hover:border-white/30 transition-all">
-                  <Rocket className="w-5 h-5 text-white" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-white font-light text-lg mb-1">Zukunftsorientiert</h3>
-                  <p className="text-white/80 text-sm font-light">
-                    Modernste Technologien für nachhaltigen Erfolg
-                  </p>
-                </div>
-              </div>
+            <div className="grid gap-4 pt-8 md:grid-cols-3">
+              {[
+                {
+                  code: '01',
+                  title: 'Vertrauen & Sicherheit',
+                  text: 'Höchste Standards in Qualität und Datenschutz',
+                },
+                {
+                  code: '02',
+                  title: 'Exzellente Ergebnisse',
+                  text: 'Messbare Resultate, die Ihre Erwartungen übertreffen',
+                },
+                {
+                  code: '03',
+                  title: 'Zukunftsorientiert',
+                  text: 'Modernste Technologien für nachhaltigen Erfolg',
+                },
+              ].map((item) => (
+                <article
+                  key={item.code}
+                  className="group relative overflow-hidden rounded-2xl border border-white/20 bg-white/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-white/35"
+                >
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#F5E6D3]/60 to-transparent opacity-70" />
+                  <div className="mb-4 inline-flex rounded-lg border border-[#F5E6D3]/50 bg-[#F5E6D3]/20 px-3 py-1 font-mono text-xs tracking-[0.25em] text-[#F5E6D3]">
+                    {item.code}
+                  </div>
+                  <h3 className="mb-2 text-white font-light text-lg leading-snug">{item.title}</h3>
+                  <p className="text-white/80 text-sm font-light leading-relaxed">{item.text}</p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
