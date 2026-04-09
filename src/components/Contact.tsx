@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { supabase } from '../lib/supabase';
-import ContactMap from './ContactMap';
 import {
   getWhatsAppChatUrl,
   GOOGLE_MAPS_OPEN_URL,
@@ -101,11 +100,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <ContactMap variant="under-intro" />
-
         <div
           ref={whatsappRef}
-          className={`mb-10 mt-10 w-full max-w-6xl mx-auto md:mb-12 will-change-transform ${whatsappVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
+          className={`mb-10 w-full max-w-6xl mx-auto md:mb-12 will-change-transform ${whatsappVisible ? 'pointer-events-auto' : 'pointer-events-none'}`}
           style={{
             opacity: whatsappVisible ? 1 : 0,
             transform: whatsappVisible ? 'translateY(0) scale(1)' : 'translateY(2rem) scale(0.92)',
