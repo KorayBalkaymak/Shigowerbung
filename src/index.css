@@ -39,10 +39,25 @@
     animation: hologram-shimmer 5s linear infinite;
   }
 
+  .animate-float-slow {
+    animation: float-slow 7.5s ease-in-out infinite;
+  }
+
+  .animate-float-slow-delayed {
+    animation: float-slow 8.8s ease-in-out infinite 1.8s;
+  }
+
+  .animate-pan-shimmer {
+    animation: pan-shimmer 7.2s linear infinite;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .animate-hologram-pulse,
     .animate-hologram-sweep,
-    .animate-hologram-shimmer {
+    .animate-hologram-shimmer,
+    .animate-float-slow,
+    .animate-float-slow-delayed,
+    .animate-pan-shimmer {
       animation: none;
     }
   }
@@ -107,6 +122,25 @@
   }
   100% {
     background-position: 180% 60%;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -16px, 0) scale(1.03);
+  }
+}
+
+@keyframes pan-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 180% 50%;
   }
 }
 
