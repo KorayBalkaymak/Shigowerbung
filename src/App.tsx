@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,7 +9,25 @@ import Footer from './components/Footer';
 import Impressum from './components/Impressum';
 
 function App() {
-  if (typeof window !== 'undefined' && window.location.pathname === '/impressum') {
+  const [routeKey, setRouteKey] = useState(() => {
+    if (typeof window === 'undefined') return '/';
+    return `${window.location.pathname}${window.location.hash}`;
+  });
+
+  useEffect(() => {
+    const syncRoute = () => {
+      setRouteKey(`${window.location.pathname}${window.location.hash}`);
+    };
+
+    window.addEventListener('popstate', syncRoute);
+    window.addEventListener('hashchange', syncRoute);
+    return () => {
+      window.removeEventListener('popstate', syncRoute);
+      window.removeEventListener('hashchange', syncRoute);
+    };
+  }, []);
+
+  if (routeKey === '/impressum' || routeKey.endsWith('#impressum')) {
     return <Impressum />;
   }
 
