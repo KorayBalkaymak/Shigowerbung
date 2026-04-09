@@ -24,7 +24,7 @@ const Footer = () => {
               Datenschutz
             </a>
             <a
-              href="/#impressum"
+              href="#impressum"
               className="text-white/40 hover:text-white text-sm font-light transition-colors"
             >
               Impressum
