@@ -55,10 +55,10 @@ const Datenschutz = () => {
             <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO</p>
             <p className="pt-2">
               Nutzen Sie unser Kontaktformular, werden die von Ihnen eingegebenen Daten (z.&nbsp;B. Name,
-              E-Mail-Adresse, optional Telefonnummer und Nachricht) zur Bearbeitung Ihrer Anfrage
-              verarbeitet und bei Nutzung der technischen Infrastruktur in einer Datenbank beim Anbieter
-              Supabase (Supabase Inc.) gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO
-              (Vertragsanbahnung bzw. Beantwortung Ihrer Anfrage).
+              E-Mail-Adresse, optional Telefonnummer und Nachricht) zur Bearbeitung Ihrer Anfrage über den
+              Dienst Formspree (Formspree Inc., USA) als E-Mail an uns übermittelt und dort technisch
+              verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung bzw. Beantwortung
+              Ihrer Anfrage).
             </p>
           </section>
 

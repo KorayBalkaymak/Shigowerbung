@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import { supabase } from '../lib/supabase';
 import {
   getWhatsAppChatUrl,
   GOOGLE_MAPS_OPEN_URL,
@@ -55,16 +54,40 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    const formId = import.meta.env.VITE_FORMSPREE_FORM_ID;
+
     try {
-      if (!supabase) {
-        throw new Error('Kontaktformular: Supabase ist nicht konfiguriert (VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY in Vercel).');
+      if (!formId) {
+        throw new Error(
+          'Kontaktformular: Formspree ist nicht konfiguriert. Bitte VITE_FORMSPREE_FORM_ID in Vercel setzen (Form-ID aus https://formspree.io).'
+        );
       }
 
-      const { error } = await supabase
-        .from('contact_submissions')
-        .insert([formData]);
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _replyto: formData.email,
+          phone: formData.phone || '',
+          message: formData.message,
+          _subject: 'Kontaktanfrage shigowerbung.de',
+        }),
+      });
 
-      if (error) throw error;
+      const data = (await response.json().catch(() => ({}))) as { error?: string; errors?: unknown };
+
+      if (!response.ok) {
+        const msg =
+          typeof data.error === 'string'
+            ? data.error
+            : 'Die Nachricht konnte nicht gesendet werden.';
+        throw new Error(msg);
+      }
 
       setSubmitStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
