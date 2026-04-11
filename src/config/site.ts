@@ -1,6 +1,10 @@
 /** Zentrale Firmenadresse (Anzeige + Karte) */
 export const SITE_ADDRESS = 'Im Remenfeld 1, 38104 Braunschweig';
 
+/** Öffentliche Kontakt-E-Mail */
+export const SITE_EMAIL = 'info@shigowerbung.de';
+export const SITE_EMAIL_MAILTO = `mailto:${SITE_EMAIL}`;
+
 /**
  * Google Maps Embed (Standard ohne API-Key).
  * Überschreiben via .env: VITE_GOOGLE_MAPS_EMBED_URL=…

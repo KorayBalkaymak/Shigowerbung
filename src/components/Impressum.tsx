@@ -1,3 +1,5 @@
+import { SITE_EMAIL } from '../config/site';
+
 const Impressum = () => {
   return (
     <main className="min-h-screen bg-black py-24">
@@ -28,7 +30,7 @@ const Impressum = () => {
           <section className="space-y-1">
             <h3 className="font-medium text-black">Kontakt:</h3>
             <p>Telefon: 0531 88619706</p>
-            <p>E-Mail: shigo.info@gmail.com</p>
+            <p>E-Mail: {SITE_EMAIL}</p>
             <p>Website: www.shigowerbung.de</p>
           </section>
 

@@ -1,3 +1,5 @@
+import { SITE_EMAIL } from '../config/site';
+
 const Datenschutz = () => {
   return (
     <main className="min-h-screen bg-black py-24">
@@ -26,7 +28,7 @@ const Datenschutz = () => {
             <p>Im Remenfeld 1</p>
             <p>38104 Braunschweig</p>
             <p>Deutschland</p>
-            <p>E-Mail: shigo.info@gmail.com</p>
+            <p>E-Mail: {SITE_EMAIL}</p>
             <p>Telefon: 0531 88619706</p>
           </section>
 

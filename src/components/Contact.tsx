@@ -5,6 +5,8 @@ import {
   getWhatsAppChatUrl,
   GOOGLE_MAPS_OPEN_URL,
   SITE_ADDRESS,
+  SITE_EMAIL,
+  SITE_EMAIL_MAILTO,
   SITE_PHONE_DISPLAY,
   SITE_PHONE_TEL,
 } from '../config/site';
@@ -238,7 +240,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="mb-1 text-lg font-light text-white">Email</h3>
-                  <p className="text-sm font-light text-white/90">kontakt@shigowerbung.de</p>
+                  <a
+                    href={SITE_EMAIL_MAILTO}
+                    className="text-sm font-light text-white/90 transition-colors hover:text-white"
+                  >
+                    {SITE_EMAIL}
+                  </a>
                 </div>
               </div>
             </div>
