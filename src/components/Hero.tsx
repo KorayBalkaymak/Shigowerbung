@@ -15,7 +15,7 @@ const Hero = () => {
     >
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/akinhome2.png')" }}
+        style={{ backgroundImage: "url('/akinhome3.png')" }}
         aria-hidden
       />
 
