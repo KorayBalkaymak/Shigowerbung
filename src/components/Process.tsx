@@ -73,18 +73,12 @@ const Process = () => {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center md:mb-24">
-          <div className="mb-5 inline-flex items-center gap-3">
-            <span className="h-px w-8 bg-gradient-to-r from-transparent to-white/40" aria-hidden />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.4em] text-white">
-              ABLAUF
-            </span>
-            <span className="h-px w-8 bg-gradient-to-l from-transparent to-white/40" aria-hidden />
-          </div>
-          <h2 className="mb-5 text-3xl font-extralight tracking-tight text-white sm:text-4xl md:text-5xl md:leading-[1.12] lg:text-6xl lg:leading-[1.08]">
+        <div className="mb-20 text-center">
+          <div className="mb-4 text-xs font-medium tracking-[0.35em] text-white">ABLAUF</div>
+          <h2 className="mb-6 text-5xl font-thin tracking-tight text-white md:text-6xl">
             Transparenter Ablauf für 3D-Reklame, Drucksachen und Markenauftritt
           </h2>
-          <p className="mx-auto max-w-2xl text-base font-light leading-relaxed text-white/70 md:text-lg">
+          <p className="mx-auto max-w-2xl text-lg font-light leading-relaxed text-white/55">
             Vier klare Schritte von der Analyse bis zum Ergebnis – partnerschaftlich begleitet für Läden und
             Unternehmen in Braunschweig und Umgebung.
           </p>
